@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Formulário -->
+    <EditText android:id="@+id/editTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Título do Livro" />
+    <EditText android:id="@+id/editAutor" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Autor" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Spinner android:id="@+id/spinnerGenero" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" />
+        <EditText android:id="@+id/editAno" android:layout_width="100dp" android:layout_height="wrap_content" android:hint="Ano" android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <Spinner android:id="@+id/spinnerStatus" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" />
+        <Switch android:id="@+id/switchFavorito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Favorito?" />
+    </LinearLayout>
+
+    <Button android:id="@+id/btnSalvar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Salvar Livro" />
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#CCC" android:layout_marginVertical="8dp"/>
+
+    <!-- Filtros e Contagem (Extras) -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Filtrar:" android:textStyle="bold"/>
+        <Spinner android:id="@+id/spinnerFiltroGenero" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" />
+        <TextView android:id="@+id/tvTotalLivros" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total: 0" android:textStyle="bold" android:textColor="#000"/>
+    </LinearLayout>
+
+    <!-- Lista -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLivros"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

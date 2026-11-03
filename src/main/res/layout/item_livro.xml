@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView android:id="@+id/tvItemTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:textStyle="bold" android:textSize="18sp"/>
+        <TextView android:id="@+id/tvItemAutor" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:id="@+id/tvItemGenero" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            <TextView android:id="@+id/tvItemAno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+            <TextView android:id="@+id/tvItemStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvItemFavorito" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#D32F2F" android:textStyle="italic"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
